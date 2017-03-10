@@ -1,0 +1,48 @@
+
+1.  a. Orang(dian).          = dian adalah orang.
+    b. mobil(atoz).          = atoz adalah mobil.
+    c. suka (dian, atoz).    = dian(orang) suka dengan atoz(mobil).
+    d. dijual (atoz).        = mobil atoz dijual
+    e. dapat_membeli (X,Y):-
+   orang (X),
+   mobil (Y),
+   suka (X,Y),
+   dijual (Y),
+   suka (_,Apa).
+
+   = X dapat dibeli Y,
+   jika X adalah orang,
+   Y adalah mobil, 
+   X suka Y, 
+   Y dijual, 
+   Apa yang disukai?
+
+2.  a.  Ricky mempunyai hobi bermain catur.
+	Hobi (ricky, catur).
+
+    b.  Embang orangnya pemalas.
+	Pemalas (embang) .
+
+    c.  Yusida seorang vegetarian.
+	Vegetarian (yusida) .
+
+    d.  Kusdiar pandai bermain gitar.
+	Pandai(kusdiar,gitar) .
+
+    e.  Mobil yang berwarna merah itu milik sadek, bermerk BMW.
+	Mobil (sadek, merah) dan mobil(sadek, bmw) .
+
+    f.  Awan seorang pemain piano, berasal dari pontianak bersuku jawa.
+	Pemain_piano(awan) dan pontianak(asal); jawa (suku) .
+
+    g.  Seseorang dikatakan baik jika mempunyai sifat penyayang dan dermawan.
+	Baik (orang) :- sifat (penyayang,dermawan).
+
+    h.  Seseorang dikatakan pintar jika salah satu dari Matematika atau Ipa atau IPS mendapat nilai tinggi.
+	Pintar (orang) :- 
+	mendapat_nilai_tinggi (matematika) ;
+	mendapat_nilai_tinggi (ipa);
+	mendapat_nilai_tinggi (ips).
+
+    i.  Setiap orang pasti mati.
+	Orang (setiap,mati) .

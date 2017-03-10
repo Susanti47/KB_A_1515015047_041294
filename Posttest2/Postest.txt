@@ -1,0 +1,19 @@
+Keyword-keyword di dalam Prolog
+
+implement dan end implement = menerapkan dan akhir mengimplementasikan
+			      Di antara semua kata kunci yang dibahas di sini, ini adalah satu-satunya, yang ada sebagai pasangan. Visual Prolog memperlakukan kode 			              yang ditulis antara dua kata kunci tersebut sebagai kode milik satu kelas. Nama kelas harus diberikan setelah menerapkan kata kunci.
+
+open  	= Kata kunci ini digunakan untuk memperluas visibilitas lingkup kelas. Hal ini untuk digunakan hanya setelah menerapkan kata kunci.
+
+constants = Kata kunci ini digunakan untuk menandai bagian dari kode yang mendefinisikan beberapa nilai yang umum digunakan dalam kode program. Misalnya, jika string 	       literal "PDC Prolog" yang akan digunakan di beberapa lokasi di seluruh kode, maka Anda dapat menentukan mnemonic (pendek-bentuk, kata mudah diingat) .
+
+domains  = Kata kunci ini digunakan untuk menandai bagian menyatakan domain yang akan digunakan dalam kode. Ada banyak variasi untuk sintaks deklarasi domain tersebut, dan mereka memenuhi semua jenis kemungkinan domain yang akan digunakan nanti dalam kode. Seperti tutorial ini adalah satu dasar, kita tidak akan masuk ke rincian halus dari deklarasi domain yang bisa menjadi mungkin.
+Untuk meringkas di sini, Anda akan menyatakan functor yang akan digunakan untuk domain dan jenis domain yang akan membentuk argumen. Functors dan domain senyawa yang dijelaskan secara rinci dalam bagian sebelumnya dari Tutorial.	
+
+class facts = Kata kunci ini menunjuk bagian, yang menyatakan fakta-fakta yang akan digunakan nanti dalam kode program. Setiap Bahkan dinyatakan dengan nama yang digunakan untuk menandakan fakta dan argumen yang digunakan untuk fakta masing-masing bersama dengan domain yang mereka argumen milik.
+
+class predicates = Bagian ini berisi deklarasi predikat yang akan kemudian didefinisikan dalam bagian klausa kode. Sekali lagi, nama-nama yang akan digunakan untuk predikat ini bersama dengan argumen dan domain, dimana argumen milik, akan ditunjukkan di bagian ini.
+
+clauses  = Dari semua bagian yang hadir dalam kode Visual Prolog, bagian ini adalah salah satu yang erat meniru program tradisional Prolog. Ini berisi definisi sebenarnya dari predikat sebelumnya dinyatakan. Dan Anda akan menemukan bahwa predikat yang digunakan di sini akan mengikuti sintaks sebagaimana dinyatakan di kelas predikat bagian.
+
+goal = Bagian ini mendefinisikan titik masuk utama ke program Visual Prolog. Penjelasan lebih rinci diberikan di bawah ini.
