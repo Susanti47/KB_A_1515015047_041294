@@ -39,10 +39,11 @@
 	Baik (orang) :- sifat (penyayang,dermawan).
 
     h.  Seseorang dikatakan pintar jika salah satu dari Matematika atau Ipa atau IPS mendapat nilai tinggi.
-	Pintar (orang) :- 
-	mendapat_nilai_tinggi (matematika) ;
-	mendapat_nilai_tinggi (ipa);
-	mendapat_nilai_tinggi (ips).
+	Pintar (orang Y) :- 
+	mendapat_nilai_tinggi (Y,matematika) ;
+	mendapat_nilai_tinggi (Y, ipa);
+	mendapat_nilai_tinggi (Y, ips).
 
     i.  Setiap orang pasti mati.
-	Orang (setiap,mati) .
+	pasti (X,mati) :-
+	 orang (X).
