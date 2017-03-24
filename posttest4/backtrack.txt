@@ -1,0 +1,37 @@
+predicates
+  buy_car(symbol,symbol) - determ (i,o)
+  car(symbol,symbol,integer) - nondeterm (i,o,o)
+  colors(symbol,symbol) - nondeterm (i,i)
+
+clauses
+  buy_car(Model,Color):- %model dapat dibeli dengan warna hanya jika
+	car(Model,Color,Price), %model adalah sebuah mobil dengan warna dan harga
+	colors(Color,sexy),!, %warna dari mobil adalah sexy
+	Price > 25000. %harganya juga lebih besar dari 25000
+
+  car(maserati,green,25000).
+  car(corvette,black,24000).
+  car(corvette,red,26000).
+  car(porsche,red,24000).
+
+  colors(red,sexy).
+  colors(black,mean).
+  colors(green,preppy).
+
+goal
+  buy_car(corvette,Y). 
+
+Untuk mengetahui terjadinya lacakbalik, akan diamati langkah demi langkah
+bagaimana Visual Prolog mencari solusi dari goal yang diberikan.
+
+1. Visual Prolog memanggil predikat buy_car dengan variabel bebas Y.
+Untuk mencoba menjawab panggilan ini,Ditemukan kecocokan dengan klausa buy_car, dan variabel
+Y diunifikasikan dengan predikat buy_car.
+
+2. Kemudian,car (corvette,red,26000),Ditemukan pencocokan dengan fakta pertama dari klausa buy_car. Pada titik ini colors
+berwarna red dan sexy. 
+
+3. Visual Prolog sekarang melanjutkan ke subgoal selanjutnya (terakhir) pada rule yaitu
+perbandingan:
+price > 25000.
+Uji ini berhasil karna ditemukan harga yang dicari lebih besar dari 25000 ada dan warna yang dinginkan juga tersedia sesuai dengan clauses nya sehingga uji ini dinyatakan berhasil.  
